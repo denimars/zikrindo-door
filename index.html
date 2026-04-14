@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Economy Door | Distributor Terbesar Pintu Kamar Mandi di NTB</title>
+  <meta name="description" content="Economy Door adalah distributor terbesar pintu kamar mandi di NTB. Kualitas terjamin, harga terjangkau, pengiriman cepat di Lombok dan sekitarnya." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ─────────────────────────────────────────────
+       CSS VARIABLES
+    ───────────────────────────────────────────── */
+    :root {
+      --primary:       #1a56db;
+      --primary-dark:  #1240a8;
+      --accent:        #38bdf8;
+      --bg-dark:       #0f1117;
+      --bg-surface:    #181c27;
+      --bg-light:      #f4f7fb;
+      --text-dark:     #1e293b;
+      --text-light:    #e8edf5;
+      --text-muted:    #94a3b8;
+      --gradient-hero: linear-gradient(135deg, #0f1117 0%, #1a2540 100%);
+      --radius:        12px;
+      --transition:    0.3s ease;
+    }
+
+    /* ─────────────────────────────────────────────
+       RESET & BASE
+    ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Syne', sans-serif;
+      font-feature-settings: "kern" 1;
+      letter-spacing: -0.02em;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    img { max-width: 100%; display: block; }
+
+    /* ─────────────────────────────────────────────
+       UTILITIES
+    ───────────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 1.0rem;
+      font-weight: 400;
+      line-height: 1.7;
+      margin-bottom: 3.5rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #fff, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Viewport animation classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─────────────────────────────────────────────
+       BUTTONS
+    ───────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26, 86, 219, 0.45);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .btn-wa {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .btn-wa:hover {
+      background: #1daa52;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-tel {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    .btn-tel:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Ripple */
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.15);
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .btn:active::after { opacity: 1; }
+
+    /* ─────────────────────────────────────────────
+       NAVBAR
+    ───────────────────────────────────────────── */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 18px 0;
+      transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
+    }
+
+    #navbar.scrolled {
+      background: rgba(15, 17, 23, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 2px 24px rgba(0,0,0,0.35);
+      padding: 12px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover { color: #fff; }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: rgba(15, 17, 23, 0.98);
+      backdrop-filter: blur(16px);
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 999;
+      padding-top: 80px;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .mobile-nav.open { display: flex; }
+
+    .mobile-nav a {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-light);
+      transition: color var(--transition);
+    }
+
+    .mobile-nav a:hover { color: var(--accent); }
+
+    /* ─────────────────────────────────────────────
+       HERO SECTION
+    ───────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      background: #09090c;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 110px 0 80px;
+    }
+
+    /* Diagonal spotlight — lebih hangat, cocok dengan foto abu-putih */
+    .hero-spotlight {
+      position: absolute;
+      top: -200px;
+      right: 20%;
+      width: 600px;
+      height: 1000px;
+      background: linear-gradient(168deg, rgba(100,116,139,0.09) 0%, rgba(148,163,184,0.04) 40%, transparent 65%);
+      transform: rotate(-10deg);
+      transform-origin: top center;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Subtle horizontal scan lines */
+    .hero-scanlines {
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 5px,
+        rgba(255,255,255,0.013) 5px,
+        rgba(255,255,255,0.013) 6px
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Ghost "DOOR" word in background */
+    .hero-ghost-word {
+      position: absolute;
+      left: -2%;
+      bottom: -6%;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(180px, 22vw, 320px);
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(148,163,184,0.05);
+      letter-spacing: -0.05em;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+    }
+
+    /* Thin horizontal accent line top-left */
+    .hero-accent-line {
+      position: absolute;
+      top: 0; left: 0;
+      width: 38%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(26,86,219,0.5), transparent);
+      z-index: 0;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .hero-content { min-width: 0; overflow: visible; }
+
+    /* Eyebrow line label */
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .hero-eyebrow-rule {
+      display: block;
+      width: 36px;
+      height: 2px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .hero-eyebrow span {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    /* Mixed-scale headline */
+    .hero-title {
+      margin-bottom: 28px;
+      line-height: 1;
+      overflow: visible;
+    }
+
+    .hero-title-xl {
+      display: block;
+      font-size: clamp(3rem, 5.5vw, 4.8rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.0;
+      background: linear-gradient(150deg, #ffffff 30%, #c8deff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      overflow: visible;
+    }
+
+    .hero-title-tag {
+      display: inline-block;
+      font-size: clamp(0.7rem, 1.4vw, 0.95rem);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding: 6px 0;
+      margin: 6px 0;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 36px;
+      max-width: 440px;
+      font-weight: 400;
+    }
+
+    .hero-btns {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+
+    /* Text-arrow secondary CTA */
+    .btn-arrow {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s ease, gap 0.3s ease;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-arrow:hover {
+      color: #fff;
+      gap: 14px;
+    }
+
+    .btn-arrow svg {
+      transition: transform 0.3s ease;
+    }
+
+    .btn-arrow:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* Inline stats strip */
+    .hero-stats-strip {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-top: 44px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .hero-stat-item strong {
+      display: block;
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .hero-stat-item span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-stat-sep {
+      width: 1px;
+      height: 32px;
+      background: rgba(255,255,255,0.1);
+      flex-shrink: 0;
+    }
+
+    /* ─── Hero image visual ─── */
+    .hero-visual {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-end;
+      position: relative;
+      margin-right: -20px;
+    }
+
+    .hero-img-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      height: min(88vh, 680px);
+      border-radius: 16px 0 0 16px;
+      overflow: hidden;
+      box-shadow:
+        -40px 0 80px rgba(7,9,15,0.7),
+        0 40px 80px rgba(0,0,0,0.5);
+    }
+
+    .hero-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      filter: brightness(0.88) contrast(1.05) saturate(0.9);
+    }
+
+    /* Left fade — blends image into dark background */
+    .hero-img-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right,
+        #07090f 0%,
+        rgba(7,9,15,0.55) 28%,
+        rgba(7,9,15,0.1) 55%,
+        transparent 75%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Bottom fade */
+    .hero-img-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 25%;
+      background: linear-gradient(to top, rgba(7,9,15,0.7) 0%, transparent 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Quality badge on image */
+    .hero-img-badge {
+      position: absolute;
+      bottom: 28px;
+      right: 24px;
+      z-index: 2;
+      background: rgba(10,12,18,0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-img-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4ade80;
+      flex-shrink: 0;
+      box-shadow: 0 0 8px rgba(74,222,128,0.6);
+    }
+
+    .hero-img-badge span {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-light);
+      letter-spacing: 0.01em;
+    }
+
+    /* Scroll hint */
+    .hero-scroll {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      z-index: 2;
+    }
+
+    .hero-scroll-bar {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(180deg, transparent, rgba(56,189,248,0.5));
+      animation: scrollDrop 2s ease-in-out infinite;
+    }
+
+    .hero-scroll-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    @keyframes scrollDrop {
+      0% { opacity: 0; transform: scaleY(0); transform-origin: top; }
+      50% { opacity: 1; transform: scaleY(1); }
+      100% { opacity: 0; transform: scaleY(1); transform-origin: bottom; }
+    }
+
+    /* ─────────────────────────────────────────────
+       WAVE DIVIDER
+    ───────────────────────────────────────────── */
+    .wave-divider {
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      display: block;
+    }
+
+    .wave-divider svg { display: block; width: 100%; }
+
+    /* ─────────────────────────────────────────────
+       STATS SECTION
+    ───────────────────────────────────────────── */
+    #stats {
+      background: var(--bg-surface);
+      padding: 60px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+
+    .stat-card {
+      padding: 28px 20px;
+      border-radius: var(--radius);
+      background: rgba(26, 86, 219, 0.08);
+      border: 1px solid rgba(26, 86, 219, 0.15);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(26, 86, 219, 0.2);
+    }
+
+    .stat-number {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 8px;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ─────────────────────────────────────────────
+       WHY CHOOSE US
+    ───────────────────────────────────────────── */
+    #why {
+      background: var(--bg-light);
+      padding: 90px 0;
+    }
+
+    #why .section-title { color: var(--text-dark); }
+    #why .section-subtitle { color: #64748b; }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .why-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      border: 1px solid #e2e8f0;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .why-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(26, 86, 219, 0.12);
+      border-color: var(--primary);
+    }
+
+    .why-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(26, 86, 219, 0.08);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+    }
+
+    .why-card h3 {
+      font-size: 1.0rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .why-card p {
+      font-size: 0.9rem;
+      color: #64748b;
+      line-height: 1.65;
+      font-weight: 400;
+    }
+
+    /* ─────────────────────────────────────────────
+       PRODUCTS SECTION
+    ───────────────────────────────────────────── */
+    #products {
+      background: var(--bg-dark);
+      padding: 90px 0;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.06);
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(26, 86, 219, 0.25);
+    }
+
+    .product-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-img-bg {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-card:nth-child(1) .product-img-bg {
+      background: linear-gradient(135deg, #1a2540 0%, #0f1117 100%);
+    }
+    .product-card:nth-child(2) .product-img-bg {
+      background: linear-gradient(135deg, #2d1b0e 0%, #1a0f05 100%);
+    }
+    .product-card:nth-child(3) .product-img-bg {
+      background: linear-gradient(135deg, #0f1a2d 0%, #060d1a 100%);
+    }
+    .product-card:nth-child(4) .product-img-bg {
+      background: linear-gradient(135deg, #0d2340 0%, #061224 100%);
+    }
+
+    .product-svg-wrap {
+      opacity: 0.7;
+    }
+
+    .product-body {
+      padding: 20px;
+    }
+
+    .product-badge {
+      display: inline-block;
+      background: rgba(26, 86, 219, 0.15);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 50px;
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+
+    .product-name {
+      font-size: 1.0rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-light);
+      letter-spacing: -0.01em;
+    }
+
+    .product-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+      font-weight: 400;
+    }
+
+    .product-card .btn {
+      width: 100%;
+      justify-content: center;
+      padding: 11px 20px;
+      font-size: 0.85rem;
+    }
+
+    /* ─────────────────────────────────────────────
+       CTA SECTION
+    ───────────────────────────────────────────── */
+    #cta {
+      background: linear-gradient(135deg, #1a2540 0%, #0f1117 100%);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(56,189,248,0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      font-size: clamp(1.8rem, 4.5vw, 2.9rem);
+      font-weight: 800;
+      margin-bottom: 18px;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+    }
+
+    .cta-text {
+      color: var(--text-muted);
+      font-size: 1.0rem;
+      line-height: 1.75;
+      margin-bottom: 44px;
+      font-weight: 400;
+    }
+
+    .cta-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ─────────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────────── */
+    #footer {
+      background: #08090e;
+      padding: 60px 0 30px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-top: 14px;
+      max-width: 300px;
+    }
+
+    .footer-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .footer-links { list-style: none; }
+
+    .footer-links li + li { margin-top: 10px; }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      transition: color var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      transition: all var(--transition);
+    }
+
+    .social-link:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    /* ─────────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+        padding-bottom: 60px;
+      }
+
+      .hero-eyebrow { justify-content: center; }
+      .hero-subtitle { margin-left: auto; margin-right: auto; }
+      .hero-btns { justify-content: center; }
+      .hero-stats-strip { justify-content: center; }
+      .hero-visual {
+        order: -1;
+        margin-right: 0;
+        justify-content: center;
+      }
+      .hero-img-wrap {
+        border-radius: 16px;
+        height: min(55vw, 380px);
+        max-width: 100%;
+      }
+      .hero-img-wrap::before {
+        background: linear-gradient(to top,
+          #09090c 0%,
+          rgba(9,9,12,0.2) 30%,
+          transparent 60%
+        );
+      }
+      .hero-ghost-word { display: none; }
+
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 480px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-stats-strip { gap: 16px; }
+      .hero-img-wrap { height: 60vw; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="2" width="18" height="20" rx="2"/>
+            <circle cx="15.5" cy="12" r="1.2" fill="#fff" stroke="none"/>
+            <line x1="6" y1="6" x2="18" y2="6"/>
+            <line x1="6" y1="18" x2="18" y2="18"/>
+          </svg>
+        </div>
+        Economy Door
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#products">Produk</a></li>
+        <li><a href="#why">Kelebihan</a></li>
+        <li><a href="#cta">Hubungi Kami</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20tanya%20produk%20Economy%20Door" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <ul class="mobile-nav" id="mobileNav">
+    <li><a href="#products" class="mobile-nav-link">Produk</a></li>
+    <li><a href="#why" class="mobile-nav-link">Kelebihan</a></li>
+    <li><a href="#cta" class="mobile-nav-link">Hubungi Kami</a></li>
+    <li>
+      <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20tanya%20produk%20Economy%20Door" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp Sekarang</a>
+    </li>
+  </ul>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section id="hero">
+    <!-- Background layers -->
+    <div class="hero-spotlight" aria-hidden="true"></div>
+    <div class="hero-scanlines" aria-hidden="true"></div>
+    <div class="hero-ghost-word" aria-hidden="true">DOOR</div>
+    <div class="hero-accent-line" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+
+      <!-- Left: Copy -->
+      <div class="hero-content reveal">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-rule"></span>
+          <span>Distributor Resmi · NTB</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="hero-title-tag">Pintu Kamar Mandi</span>
+          <span class="hero-title-xl">KUALITAS</span>
+          <span class="hero-title-xl">TERBAIK</span>
+          <span class="hero-title-tag">di NTB &amp; Sekitarnya</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Solusi pintu kamar mandi tahan lama dan harga terjangkau untuk rumah maupun proyek konstruksi Anda.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#products" class="btn btn-primary">Lihat Produk</a>
+          <a href="#cta" class="btn-arrow">
+            Hubungi Kami
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-stats-strip">
+          <div class="hero-stat-item">
+            <strong>500+</strong>
+            <span>Produk Terjual</span>
+          </div>
+          <div class="hero-stat-sep"></div>
+          <div class="hero-stat-item">
+            <strong>200+</strong>
+            <span>Pelanggan Puas</span>
+          </div>
+          <div class="hero-stat-sep"></div>
+          <div class="hero-stat-item">
+            <strong>5+ Thn</strong>
+            <span>Pengalaman</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Real product image -->
+      <div class="hero-visual reveal" style="transition-delay:0.25s">
+        <div class="hero-img-wrap">
+          <img
+            src="image/hero-web.jpg"
+            alt="Pintu kamar mandi PVC Economy Door"
+            width="700"
+            height="933"
+            loading="eager"
+            decoding="async"
+          />
+          <div class="hero-img-badge">
+            <div class="hero-img-badge-dot"></div>
+            <span>Stok Tersedia · Siap Kirim</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-bar"></div>
+      <span class="hero-scroll-label">Scroll</span>
+    </div>
+  </section>
+
+  <!-- Wave -->
+  <div class="wave-divider" style="background:#09090c;">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,30 C360,70 1080,-10 1440,30 L1440,60 L0,60 Z" fill="#181c27"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       STATS
+  ═══════════════════════════════════════ -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="500" data-suffix="+">0</span>
+          <span class="stat-label">Produk Terjual</span>
+        </div>
+        <div class="stat-card reveal" style="transition-delay:0.1s">
+          <span class="stat-number" data-target="200" data-suffix="+">0</span>
+          <span class="stat-label">Pelanggan Puas</span>
+        </div>
+        <div class="stat-card reveal" style="transition-delay:0.2s">
+          <span class="stat-number" data-target="5" data-suffix="+">0</span>
+          <span class="stat-label">Tahun Pengalaman</span>
+        </div>
+        <div class="stat-card reveal" style="transition-delay:0.3s">
+          <span class="stat-number" data-target="1" data-prefix="" data-suffix=" Hari">0</span>
+          <span class="stat-label">Pengiriman Lombok</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave -->
+  <div class="wave-divider" style="background:#181c27;">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,20 C480,65 960,-5 1440,25 L1440,60 L0,60 Z" fill="#f4f7fb"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       WHY CHOOSE US
+  ═══════════════════════════════════════ -->
+  <section id="why">
+    <div class="container">
+      <h2 class="section-title reveal" style="color:var(--text-dark)">Kenapa Memilih Kami?</h2>
+      <p class="section-subtitle reveal">Kami menghadirkan solusi pintu kamar mandi terbaik dengan kualitas dan layanan yang tak tertandingi.</p>
+
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-icon">✅</div>
+          <h3>Kualitas Terjamin</h3>
+          <p>Material kuat, tahan air, tidak mudah rusak. Dipilih untuk ketahanan jangka panjang.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:0.1s">
+          <div class="why-icon">💰</div>
+          <h3>Harga Terjangkau</h3>
+          <p>Cocok untuk proyek besar maupun kebutuhan rumah tangga dengan anggaran bervariasi.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:0.2s">
+          <div class="why-icon">🎨</div>
+          <h3>Desain Modern</h3>
+          <p>Tampilan elegan dan kekinian yang mempercantik interior rumah maupun proyek Anda.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:0.3s">
+          <div class="why-icon">🛡️</div>
+          <h3>Tahan Lama</h3>
+          <p>Anti rayap dan tidak lapuk. Investasi pintu yang menguntungkan untuk jangka panjang.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:0.4s">
+          <div class="why-icon">📦</div>
+          <h3>Stok Selalu Ready</h3>
+          <p>Distributor besar dengan gudang lengkap, siap kirim kapan saja sesuai kebutuhan Anda.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:0.5s">
+          <div class="why-icon">🚚</div>
+          <h3>Pengiriman Cepat di NTB</h3>
+          <p>Melayani area Lombok &amp; sekitarnya dengan pengiriman cepat hanya dalam 1 hari.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave -->
+  <div class="wave-divider" style="background:#f4f7fb;">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,40 C360,5 1080,65 1440,20 L1440,60 L0,60 Z" fill="#0f1117"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       PRODUCTS
+  ═══════════════════════════════════════ -->
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title reveal">
+        Model yang <span class="gradient-text">Tersedia</span>
+      </h2>
+      <p class="section-subtitle reveal">Pilih pintu kamar mandi yang sesuai dengan kebutuhan dan selera Anda.</p>
+
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card reveal">
+          <div class="product-img">
+            <div class="product-img-bg">
+              <div class="product-svg-wrap">
+                <svg width="90" height="120" viewBox="0 0 90 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="4" width="74" height="112" rx="4" stroke="#38bdf8" stroke-width="2" fill="rgba(56,189,248,0.05)"/>
+                  <rect x="16" y="12" width="58" height="44" rx="2" stroke="#38bdf8" stroke-width="1.2" fill="rgba(56,189,248,0.03)"/>
+                  <rect x="16" y="62" width="58" height="46" rx="2" stroke="#38bdf8" stroke-width="1.2" fill="rgba(56,189,248,0.03)"/>
+                  <circle cx="70" cy="60" r="4" fill="#38bdf8"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-badge">PVC · Polos</span>
+            <h3 class="product-name">Pintu PVC Polos</h3>
+            <p class="product-desc">Tampilan bersih dan minimalis, cocok untuk semua gaya interior modern maupun klasik.</p>
+            <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20memesan%20Pintu%20PVC%20Polos%20dari%20Economy%20Door" class="btn btn-primary" target="_blank" rel="noopener">Pesan Sekarang</a>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card reveal" style="transition-delay:0.1s">
+          <div class="product-img">
+            <div class="product-img-bg">
+              <div class="product-svg-wrap">
+                <svg width="90" height="120" viewBox="0 0 90 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="4" width="74" height="112" rx="4" stroke="#f59e0b" stroke-width="2" fill="rgba(245,158,11,0.05)"/>
+                  <line x1="16" y1="20" x2="74" y2="20" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+                  <line x1="16" y1="32" x2="74" y2="32" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+                  <line x1="16" y1="44" x2="74" y2="44" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+                  <line x1="16" y1="56" x2="74" y2="56" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+                  <line x1="16" y1="68" x2="74" y2="68" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+                  <line x1="16" y1="80" x2="74" y2="80" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+                  <line x1="16" y1="92" x2="74" y2="92" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+                  <circle cx="70" cy="60" r="4" fill="#f59e0b"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-badge" style="color:#f59e0b;background:rgba(245,158,11,0.12)">PVC · Motif Kayu</span>
+            <h3 class="product-name">Pintu PVC Motif Kayu</h3>
+            <p class="product-desc">Estetika kayu alami yang indah tanpa khawatir rayap atau pelapukan akibat kelembaban.</p>
+            <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20memesan%20Pintu%20PVC%20Motif%20Kayu%20dari%20Economy%20Door" class="btn btn-primary" target="_blank" rel="noopener">Pesan Sekarang</a>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card reveal" style="transition-delay:0.2s">
+          <div class="product-img">
+            <div class="product-img-bg">
+              <div class="product-svg-wrap">
+                <svg width="80" height="120" viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="4" width="64" height="112" rx="4" stroke="#a78bfa" stroke-width="2" fill="rgba(167,139,250,0.05)"/>
+                  <rect x="18" y="12" width="44" height="44" rx="2" stroke="#a78bfa" stroke-width="1.2" fill="rgba(167,139,250,0.03)"/>
+                  <rect x="18" y="62" width="44" height="46" rx="2" stroke="#a78bfa" stroke-width="1.2" fill="rgba(167,139,250,0.03)"/>
+                  <circle cx="60" cy="60" r="4" fill="#a78bfa"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-badge" style="color:#a78bfa;background:rgba(167,139,250,0.12)">Minimalis</span>
+            <h3 class="product-name">Pintu Kamar Mandi Minimalis</h3>
+            <p class="product-desc">Desain ramping dan efisien, ideal untuk ruang terbatas tanpa mengorbankan estetika.</p>
+            <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20memesan%20Pintu%20Kamar%20Mandi%20Minimalis%20dari%20Economy%20Door" class="btn btn-primary" target="_blank" rel="noopener">Pesan Sekarang</a>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card reveal" style="transition-delay:0.3s">
+          <div class="product-img">
+            <div class="product-img-bg">
+              <div class="product-svg-wrap">
+                <svg width="90" height="120" viewBox="0 0 90 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="4" width="74" height="112" rx="4" stroke="#38bdf8" stroke-width="2.5" fill="rgba(56,189,248,0.07)"/>
+                  <rect x="16" y="12" width="58" height="44" rx="2" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.05)"/>
+                  <rect x="16" y="62" width="58" height="46" rx="2" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.05)"/>
+                  <path d="M20 20 L30 28 L20 36" stroke="#38bdf8" stroke-width="1" opacity="0.5"/>
+                  <circle cx="70" cy="60" r="5" fill="#38bdf8" opacity="0.9"/>
+                  <circle cx="70" cy="60" r="8" stroke="#38bdf8" stroke-width="1" opacity="0.3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-badge">Premium · Anti Air</span>
+            <h3 class="product-name">Pintu Anti Air Premium</h3>
+            <p class="product-desc">Material premium terbaik, tahan terhadap kelembaban ekstrem dan paparan air terus-menerus.</p>
+            <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20memesan%20Pintu%20Anti%20Air%20Premium%20dari%20Economy%20Door" class="btn btn-primary" target="_blank" rel="noopener">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave -->
+  <div class="wave-divider" style="background:#0f1117;">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,15 C400,60 1040,0 1440,35 L1440,60 L0,60 Z" fill="#1a2540"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       CTA
+  ═══════════════════════════════════════ -->
+  <section id="cta">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <h2 class="cta-title">
+          Siap Mendapatkan Pintu <span class="gradient-text">Terbaik?</span>
+        </h2>
+        <p class="cta-text">
+          Butuh pintu kamar mandi berkualitas dengan harga terbaik? Hubungi kami sekarang dan dapatkan penawaran spesial!
+        </p>
+        <div class="cta-btns">
+          <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20tanya%20produk%20Economy%20Door" class="btn btn-wa" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            WhatsApp
+          </a>
+          <a href="tel:+6281803760306" class="btn btn-tel">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.89 10.6 19.79 19.79 0 01.82 2a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l.97-.97a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Telepon
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <div class="nav-logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="2" width="18" height="20" rx="2"/>
+                <circle cx="15.5" cy="12" r="1.2" fill="#fff" stroke="none"/>
+              </svg>
+            </div>
+            Economy Door
+          </a>
+          <p>Distributor pintu kamar mandi terpercaya di NTB dengan kualitas terbaik dan harga bersaing. Melayani kebutuhan rumah &amp; proyek di seluruh Lombok dan sekitarnya.</p>
+        </div>
+
+        <!-- Navigasi -->
+        <div>
+          <p class="footer-title">Navigasi</p>
+          <ul class="footer-links">
+            <li><a href="#products">Produk Kami</a></li>
+            <li><a href="#why">Kelebihan</a></li>
+            <li><a href="#stats">Statistik</a></li>
+            <li><a href="#cta">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontak -->
+        <div>
+          <p class="footer-title">Kontak</p>
+          <ul class="footer-links">
+            <li>
+              <a href="https://wa.me/6281803760306" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                081803760306
+              </a>
+            </li>
+            <li>
+              <a href="tel:+6281803760306">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.89 10.6 19.79 19.79 0 01.82 2a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l.97-.97a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                +62 818-037-60306
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Lombok, NTB, Indonesia
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/economydoor" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                @economydoor
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Economy Door. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="https://instagram.com/economydoor" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://facebook.com/economydoor" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/6281803760306" class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════════════ -->
+  <script>
+    // ─── Navbar scroll effect ───────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    // ─── Hamburger menu ─────────────────────
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open', isOpen);
+      hamburgerBtn.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    document.querySelectorAll('.mobile-nav-link, .mobile-nav .btn').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        hamburgerBtn.classList.remove('open');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ─── Smooth scroll for anchor links ─────
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ─── Viewport reveal animations ─────────
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ─── Count-up animation ──────────────────
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1800;
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+        el.textContent = current + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
+      }
+      requestAnimationFrame(update);
+    }
+
+    const counterEls = document.querySelectorAll('.stat-number[data-target]');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counterEls.forEach(el => counterObserver.observe(el));
+  </script>
+</body>
+</html>
