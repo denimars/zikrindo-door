@@ -764,8 +764,10 @@
 
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
+      max-width: 860px;
+      margin: 0 auto;
     }
 
     .product-card {
@@ -783,10 +785,30 @@
 
     .product-img {
       width: 100%;
-      aspect-ratio: 4/3;
+      aspect-ratio: 3/4;
       position: relative;
       overflow: hidden;
+      background: #0f1117;
     }
+
+    .product-img img,
+    .product-img picture,
+    .product-img source {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .product-img img {
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.45s ease;
+    }
+
+    .product-card:hover .product-img img {
+      transform: scale(1.04);
+    }
+
 
     .product-img-bg {
       width: 100%;
@@ -796,22 +818,6 @@
       justify-content: center;
     }
 
-    .product-card:nth-child(1) .product-img-bg {
-      background: linear-gradient(135deg, #1a2540 0%, #0f1117 100%);
-    }
-    .product-card:nth-child(2) .product-img-bg {
-      background: linear-gradient(135deg, #2d1b0e 0%, #1a0f05 100%);
-    }
-    .product-card:nth-child(3) .product-img-bg {
-      background: linear-gradient(135deg, #0f1a2d 0%, #060d1a 100%);
-    }
-    .product-card:nth-child(4) .product-img-bg {
-      background: linear-gradient(135deg, #0d2340 0%, #061224 100%);
-    }
-
-    .product-svg-wrap {
-      opacity: 0.7;
-    }
 
     .product-body {
       padding: 20px;
@@ -992,7 +998,6 @@
        RESPONSIVE
     ───────────────────────────────────────────── */
     @media (max-width: 1024px) {
-      .products-grid { grid-template-columns: repeat(2, 1fr); }
       .why-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
@@ -1271,98 +1276,32 @@
       <p class="section-subtitle reveal">Pilih pintu kamar mandi yang sesuai dengan kebutuhan dan selera Anda.</p>
 
       <div class="products-grid">
-        <!-- Product 1 -->
+        <!-- Product 1: PVC Polos -->
         <div class="product-card reveal">
           <div class="product-img">
-            <div class="product-img-bg">
-              <div class="product-svg-wrap">
-                <svg width="90" height="120" viewBox="0 0 90 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="8" y="4" width="74" height="112" rx="4" stroke="#38bdf8" stroke-width="2" fill="rgba(56,189,248,0.05)"/>
-                  <rect x="16" y="12" width="58" height="44" rx="2" stroke="#38bdf8" stroke-width="1.2" fill="rgba(56,189,248,0.03)"/>
-                  <rect x="16" y="62" width="58" height="46" rx="2" stroke="#38bdf8" stroke-width="1.2" fill="rgba(56,189,248,0.03)"/>
-                  <circle cx="70" cy="60" r="4" fill="#38bdf8"/>
-                </svg>
-              </div>
-            </div>
+            <img src="image/pvc/1.jpg" alt="Pintu PVC Polos Economy Door" loading="lazy" decoding="async" />
           </div>
           <div class="product-body">
             <span class="product-badge">PVC · Polos</span>
             <h3 class="product-name">Pintu PVC Polos</h3>
-            <p class="product-desc">Tampilan bersih dan minimalis, cocok untuk semua gaya interior modern maupun klasik.</p>
+            <p class="product-desc">Pilihan terbaik untuk kamar mandi modern. Terbuat dari material PVC berkualitas tinggi yang tahan air, anti rayap, dan tidak mudah memuai. Ringan namun kokoh, mudah dibersihkan, serta tersedia dalam berbagai ukuran standar dan custom. Cocok untuk hunian, kos, hingga proyek hotel dan apartemen.</p>
             <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20memesan%20Pintu%20PVC%20Polos%20dari%20Economy%20Door" class="btn btn-primary" target="_blank" rel="noopener">Pesan Sekarang</a>
           </div>
         </div>
 
-        <!-- Product 2 -->
-        <div class="product-card reveal" style="transition-delay:0.1s">
+        <!-- Product 2: Kaca -->
+        <div class="product-card reveal" style="transition-delay:0.15s">
           <div class="product-img">
-            <div class="product-img-bg">
-              <div class="product-svg-wrap">
-                <svg width="90" height="120" viewBox="0 0 90 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="8" y="4" width="74" height="112" rx="4" stroke="#f59e0b" stroke-width="2" fill="rgba(245,158,11,0.05)"/>
-                  <line x1="16" y1="20" x2="74" y2="20" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
-                  <line x1="16" y1="32" x2="74" y2="32" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
-                  <line x1="16" y1="44" x2="74" y2="44" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
-                  <line x1="16" y1="56" x2="74" y2="56" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
-                  <line x1="16" y1="68" x2="74" y2="68" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
-                  <line x1="16" y1="80" x2="74" y2="80" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
-                  <line x1="16" y1="92" x2="74" y2="92" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
-                  <circle cx="70" cy="60" r="4" fill="#f59e0b"/>
-                </svg>
-              </div>
-            </div>
+            <picture>
+              <source srcset="image/kaca/1.webp" type="image/webp" />
+              <img src="image/kaca/1.jpg" alt="Pintu Kaca Kamar Mandi Economy Door" loading="lazy" decoding="async" />
+            </picture>
           </div>
           <div class="product-body">
-            <span class="product-badge" style="color:#f59e0b;background:rgba(245,158,11,0.12)">PVC · Motif Kayu</span>
-            <h3 class="product-name">Pintu PVC Motif Kayu</h3>
-            <p class="product-desc">Estetika kayu alami yang indah tanpa khawatir rayap atau pelapukan akibat kelembaban.</p>
-            <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20memesan%20Pintu%20PVC%20Motif%20Kayu%20dari%20Economy%20Door" class="btn btn-primary" target="_blank" rel="noopener">Pesan Sekarang</a>
-          </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product-card reveal" style="transition-delay:0.2s">
-          <div class="product-img">
-            <div class="product-img-bg">
-              <div class="product-svg-wrap">
-                <svg width="80" height="120" viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="8" y="4" width="64" height="112" rx="4" stroke="#a78bfa" stroke-width="2" fill="rgba(167,139,250,0.05)"/>
-                  <rect x="18" y="12" width="44" height="44" rx="2" stroke="#a78bfa" stroke-width="1.2" fill="rgba(167,139,250,0.03)"/>
-                  <rect x="18" y="62" width="44" height="46" rx="2" stroke="#a78bfa" stroke-width="1.2" fill="rgba(167,139,250,0.03)"/>
-                  <circle cx="60" cy="60" r="4" fill="#a78bfa"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="product-body">
-            <span class="product-badge" style="color:#a78bfa;background:rgba(167,139,250,0.12)">Minimalis</span>
-            <h3 class="product-name">Pintu Kamar Mandi Minimalis</h3>
-            <p class="product-desc">Desain ramping dan efisien, ideal untuk ruang terbatas tanpa mengorbankan estetika.</p>
-            <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20memesan%20Pintu%20Kamar%20Mandi%20Minimalis%20dari%20Economy%20Door" class="btn btn-primary" target="_blank" rel="noopener">Pesan Sekarang</a>
-          </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card reveal" style="transition-delay:0.3s">
-          <div class="product-img">
-            <div class="product-img-bg">
-              <div class="product-svg-wrap">
-                <svg width="90" height="120" viewBox="0 0 90 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="8" y="4" width="74" height="112" rx="4" stroke="#38bdf8" stroke-width="2.5" fill="rgba(56,189,248,0.07)"/>
-                  <rect x="16" y="12" width="58" height="44" rx="2" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.05)"/>
-                  <rect x="16" y="62" width="58" height="46" rx="2" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.05)"/>
-                  <path d="M20 20 L30 28 L20 36" stroke="#38bdf8" stroke-width="1" opacity="0.5"/>
-                  <circle cx="70" cy="60" r="5" fill="#38bdf8" opacity="0.9"/>
-                  <circle cx="70" cy="60" r="8" stroke="#38bdf8" stroke-width="1" opacity="0.3"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="product-body">
-            <span class="product-badge">Premium · Anti Air</span>
-            <h3 class="product-name">Pintu Anti Air Premium</h3>
-            <p class="product-desc">Material premium terbaik, tahan terhadap kelembaban ekstrem dan paparan air terus-menerus.</p>
-            <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20memesan%20Pintu%20Anti%20Air%20Premium%20dari%20Economy%20Door" class="btn btn-primary" target="_blank" rel="noopener">Pesan Sekarang</a>
+            <span class="product-badge" style="color:#38bdf8;background:rgba(56,189,248,0.12)">Kaca · Premium</span>
+            <h3 class="product-name">Pintu Kaca</h3>
+            <p class="product-desc">Tampilan elegan dan mewah yang menghadirkan kesan luas pada kamar mandi Anda. Menggunakan kaca tempered tebal yang kuat, aman, dan tahan benturan. Desain transparan atau frosted tersedia sesuai kebutuhan privasi. Ideal untuk hunian premium, villa, dan proyek komersial kelas atas.</p>
+            <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20memesan%20Pintu%20Kaca%20dari%20Economy%20Door" class="btn btn-primary" target="_blank" rel="noopener">Pesan Sekarang</a>
           </div>
         </div>
       </div>
