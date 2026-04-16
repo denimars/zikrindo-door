@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Economic Door | Distributor Terbesar Pintu Kamar Mandi di NTB</title>
-  <meta name="description" content="Economic Door adalah distributor terbesar pintu kamar mandi di NTB. Kualitas terjamin, harga terjangkau, pengiriman cepat di Lombok dan sekitarnya." />
+  <title>Economic Door | Distributor Terbesar Pintu UPVC  di NTB</title>
+  <meta name="description" content="Economic Door adalah distributor terbesar pintu UPVC  di NTB. Kualitas terjamin, harga terjangkau, pengiriman cepat di Lombok dan sekitarnya." />
   <link rel="icon" type="image/jpeg" href="image/logo.jpeg" />
   <link rel="apple-touch-icon" href="image/logo.jpeg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,7 +34,7 @@
     ───────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -324,7 +324,7 @@
       position: absolute;
       top: -200px;
       right: 20%;
-      width: 600px;
+      width: min(600px, 100vw);
       height: 1000px;
       background: linear-gradient(168deg, rgba(100,116,139,0.09) 0%, rgba(148,163,184,0.04) 40%, transparent 65%);
       transform: rotate(-10deg);
@@ -420,7 +420,7 @@
 
     .hero-title-xl {
       display: block;
-      font-size: clamp(3rem, 5.5vw, 4.8rem);
+      font-size: clamp(1.8rem, 9vw, 4.8rem);
       font-weight: 800;
       letter-spacing: -0.04em;
       line-height: 1.0;
@@ -428,7 +428,9 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      overflow: visible;
+      overflow: hidden;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
 
     .hero-title-tag {
@@ -488,6 +490,7 @@
     .hero-stats-strip {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 28px;
       margin-top: 44px;
       padding-top: 36px;
@@ -524,7 +527,7 @@
       align-items: stretch;
       justify-content: flex-end;
       position: relative;
-      margin-right: -20px;
+      margin-right: 0;
     }
 
     .hero-img-wrap {
@@ -657,6 +660,7 @@
     #stats {
       background: var(--bg-surface);
       padding: 60px 0;
+      overflow: hidden;
     }
 
     .stats-grid {
@@ -681,13 +685,14 @@
 
     .stat-number {
       font-family: 'Syne', sans-serif;
-      font-size: 2.6rem;
+      font-size: clamp(1.6rem, 6vw, 2.6rem);
       font-weight: 800;
       color: var(--accent);
       display: block;
       margin-bottom: 8px;
       letter-spacing: -0.03em;
       line-height: 1;
+      word-break: break-word;
     }
 
     .stat-label {
@@ -1043,9 +1048,13 @@
     @media (max-width: 480px) {
       .products-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .hero-stats-strip { gap: 16px; }
-      .hero-img-wrap { height: 60vw; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .stat-card { padding: 20px 12px; }
+      .stat-label { font-size: 0.7rem; }
+      .hero-stats-strip { gap: 16px; justify-content: center; }
+      .hero-img-wrap { height: 60vw; width: 100%; }
+      .hero-stat-sep { display: none; }
+      .container { padding: 0 16px; }
     }
   </style>
 </head>
@@ -1114,14 +1123,14 @@
         </div>
 
         <h1 class="hero-title">
-          <span class="hero-title-tag">Pintu Kamar Mandi</span>
+          <span class="hero-title-tag">Pintu UPVC Ekonomis </span>
           <span class="hero-title-xl">KUALITAS</span>
           <span class="hero-title-xl">TERBAIK</span>
           <span class="hero-title-tag">di NTB &amp; Sekitarnya</span>
         </h1>
 
         <p class="hero-subtitle">
-          Solusi pintu kamar mandi tahan lama dan harga terjangkau untuk rumah maupun proyek konstruksi Anda.
+          Solusi pintu UPVC tahan lama dan harga terjangkau untuk rumah maupun proyek konstruksi Anda.
         </p>
 
         <div class="hero-btns">
@@ -1155,7 +1164,7 @@
         <div class="hero-img-wrap">
           <img
             src="image/hero-web.jpg"
-            alt="Pintu kamar mandi PVC Economic Door"
+            alt="Pintu  UPVC Ekonomis"
             width="700"
             height="933"
             loading="eager"
@@ -1164,7 +1173,7 @@
           <div class="hero-img-badge">
             <div class="hero-img-badge-dot"></div>
             <span>Stok Tersedia · Siap Kirim</span>
-          </div>
+          <
         </div>
       </div>
     </div>
@@ -1222,7 +1231,7 @@
   <section id="why">
     <div class="container">
       <h2 class="section-title reveal" style="color:var(--text-dark)">Kenapa Memilih Kami?</h2>
-      <p class="section-subtitle reveal">Kami menghadirkan solusi pintu kamar mandi terbaik dengan kualitas dan layanan yang tak tertandingi.</p>
+      <p class="section-subtitle reveal">Kami menghadirkan solusi pintu UPVC terbaik dengan kualitas dan layanan yang tak tertandingi.</p>
 
       <div class="why-grid">
         <div class="why-card reveal">
@@ -1274,18 +1283,18 @@
       <h2 class="section-title reveal">
         Model yang <span class="gradient-text">Tersedia</span>
       </h2>
-      <p class="section-subtitle reveal">Pilih pintu kamar mandi yang sesuai dengan kebutuhan dan selera Anda.</p>
+      <p class="section-subtitle reveal">Pilih pintu UPVC yang sesuai dengan kebutuhan dan selera Anda.</p>
 
       <div class="products-grid">
-        <!-- Product 1: PVC Polos -->
+        <!-- Product 1: UPVC Polos -->
         <div class="product-card reveal">
           <div class="product-img">
-            <img src="image/pvc/1.jpg" alt="Pintu PVC Polos Economic Door" loading="lazy" decoding="async" />
+            <img src="image/pvc/1.jpg" alt="Pintu UPVC Polos Economic Door" loading="lazy" decoding="async" />
           </div>
           <div class="product-body">
-            <span class="product-badge">PVC · Polos</span>
-            <h3 class="product-name">Pintu PVC Polos</h3>
-            <p class="product-desc">Pilihan terbaik untuk kamar mandi modern. Terbuat dari material PVC berkualitas tinggi yang tahan air, anti rayap, dan tidak mudah memuai. Ringan namun kokoh, mudah dibersihkan, serta tersedia dalam berbagai ukuran standar dan custom. Cocok untuk hunian, kos, hingga proyek hotel dan apartemen.</p>
+            <span class="product-badge">UPVC · Polos</span>
+            <h3 class="product-name">Pintu UPVC Polos</h3>
+            <p class="product-desc">Pilihan terbaik untuk UPVC modern. Terbuat dari material UPVC berkualitas tinggi yang tahan air, anti rayap, dan tidak mudah memuai. Ringan namun kokoh, mudah dibersihkan, serta tersedia dalam berbagai ukuran standar dan custom. Cocok untuk hunian, kos, hingga proyek hotel dan apartemen.</p>
             <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20memesan%20Pintu%20PVC%20Polos%20dari%20Economy%20Door" class="btn btn-primary" target="_blank" rel="noopener">Pesan Sekarang</a>
           </div>
         </div>
@@ -1295,13 +1304,13 @@
           <div class="product-img">
             <picture>
               <source srcset="image/kaca/1.webp" type="image/webp" />
-              <img src="image/kaca/1.jpg" alt="Pintu Kaca Kamar Mandi Economic Door" loading="lazy" decoding="async" />
+              <img src="image/kaca/1.jpg" alt="Pintu Kaca UPVC Economic Door" loading="lazy" decoding="async" />
             </picture>
           </div>
           <div class="product-body">
             <span class="product-badge" style="color:#38bdf8;background:rgba(56,189,248,0.12)">Kaca · Premium</span>
             <h3 class="product-name">Pintu Kaca</h3>
-            <p class="product-desc">Tampilan elegan dan mewah yang menghadirkan kesan luas pada kamar mandi Anda. Menggunakan kaca tempered tebal yang kuat, aman, dan tahan benturan. Desain transparan atau frosted tersedia sesuai kebutuhan privasi. Ideal untuk hunian premium, villa, dan proyek komersial kelas atas.</p>
+            <p class="product-desc">Tampilan elegan dan mewah yang menghadirkan kesan luas pada UPVC Anda. Menggunakan kaca tempered tebal yang kuat, aman, dan tahan benturan. Desain transparan atau frosted tersedia sesuai kebutuhan privasi. Ideal untuk hunian premium, villa, dan proyek komersial kelas atas.</p>
             <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20memesan%20Pintu%20Kaca%20dari%20Economy%20Door" class="btn btn-primary" target="_blank" rel="noopener">Pesan Sekarang</a>
           </div>
         </div>
@@ -1326,7 +1335,7 @@
           Siap Mendapatkan Pintu <span class="gradient-text">Terbaik?</span>
         </h2>
         <p class="cta-text">
-          Butuh pintu kamar mandi berkualitas dengan harga terbaik? Hubungi kami sekarang dan dapatkan penawaran spesial!
+          Butuh pintu UPVC berkualitas dengan harga terbaik? Hubungi kami sekarang dan dapatkan penawaran spesial!
         </p>
         <div class="cta-btns">
           <a href="https://wa.me/6281803760306?text=Halo%2C%20saya%20ingin%20tanya%20produk%20Economy%20Door" class="btn btn-wa" target="_blank" rel="noopener">
@@ -1359,7 +1368,7 @@
             </div>
            Economic Door
           </a>
-          <p>Distributor pintu kamar mandi terpercaya di NTB dengan kualitas terbaik dan harga bersaing. Melayani kebutuhan rumah &amp; proyek di seluruh Lombok dan sekitarnya.</p>
+          <p>Distributor pintu UPVC terpercaya di NTB dengan kualitas terbaik dan harga bersaing. Melayani kebutuhan rumah &amp; proyek di seluruh Lombok dan sekitarnya.</p>
         </div>
 
         <!-- Navigasi -->
@@ -1396,7 +1405,7 @@
               </a>
             </li>
             <li>
-              <a href="https://instagram.com/economydoor" target="_blank" rel="noopener">
+              <a href="https://www.instagram.com/economicdoor" target="_blank" rel="noopener">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                 @economydoor
               </a>
